@@ -15,7 +15,11 @@ function CreateUser() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:2620/create", { name, email, age })
+      .post("https://crud-mern-redux-toolkit.onrender.com/create", {
+        name,
+        email,
+        age,
+      })
       .then((res) => {
         const data = {
           id: res.data._id,

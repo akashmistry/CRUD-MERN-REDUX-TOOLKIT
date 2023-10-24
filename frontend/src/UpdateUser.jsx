@@ -25,7 +25,11 @@ function UpdateUser() {
   const handleUpdate = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:2620/update/" + id, { name, email, age })
+      .put("https://crud-mern-redux-toolkit.onrender.com/update/" + id, {
+        name,
+        email,
+        age,
+      })
       .then((res) => {
         dispatch(updateUser({ id, name, email, age }));
         navigate("/");

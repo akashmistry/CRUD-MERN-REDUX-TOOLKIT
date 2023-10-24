@@ -9,7 +9,7 @@ function Users() {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:2620/deleteuser/" + id)
+      .delete("https://crud-mern-redux-toolkit.onrender.com/deleteuser/" + id)
       .then((res) => {
         dispatch(deleteUser({ id }));
       })

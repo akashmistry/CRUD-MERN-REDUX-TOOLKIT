@@ -13,7 +13,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:2620");
+        const response = await axios.get(
+          "https://crud-mern-redux-toolkit.onrender.com"
+        );
         dispatch(getUser(response.data));
       } catch (err) {
         console.log(err);
